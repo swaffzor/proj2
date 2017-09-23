@@ -353,6 +353,8 @@ SDRESULTS SD_Write(SD_DEV *dev, void *dat, DWORD sector)
 			
 			// Waits until finish of data programming with a timeout
 			SPI_Timer_On(SD_IO_WRITE_TIMEOUT_WAIT);
+			
+			//TODO: split into state
 			do {
 					PTB->PTOR = MASK(DBG_3);
 					PTB->PTOR = MASK(DBG_3);
